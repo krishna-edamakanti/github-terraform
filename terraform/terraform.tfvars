@@ -1,3 +1,3 @@
 rgname   = "github123"
 location = "East US"
-sname    = "demostorageaccount"
+sname    = "firststaccount"
