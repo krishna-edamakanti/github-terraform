@@ -1,4 +1,4 @@
-rgname              = "github123"
+rgname              = "github124"
 location            = "East US"
 sname               = "devopsguru191"
 resource_group_name = "aks_terraform_rg"
