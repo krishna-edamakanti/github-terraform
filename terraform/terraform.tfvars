@@ -1,4 +1,3 @@
-1/13/2222
 rgname              = "github124"
 location            = "East US"
 sname               = "devopsguru191"
