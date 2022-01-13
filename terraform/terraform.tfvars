@@ -1,6 +1,6 @@
 rgname              = "github124"
 location            = "East US"
-sname               = "devopsguru191"
+sname               = "devopsguru192"
 resource_group_name = "aks_terraform_rg"
 cluster_name        = "terraform-aks"
 kubernetes_version  = "1.19.3"
