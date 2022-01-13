@@ -1,26 +1,26 @@
-resource "azurerm_kubernetes_cluster" "default" {
-  name                = "${random_pet.prefix.id}-aks"
-  location            = azurerm_resource_group.default.location
-  resource_group_name = azurerm_resource_group.default.name
-  dns_prefix          = "${random_pet.prefix.id}-k8s"
+resource "azurerm_kubernetes_cluster" "aks" {
+  name                = var.cluster_name
+  kubernetes_version  = var.kubernetes_version
+  location            = var.location
+  resource_group_name = azurerm_resource_group.rg.name
+  dns_prefix          = var.cluster_name
+  node_resource_group = var.node_resource_group
 
   default_node_pool {
-    name            = "default"
-    node_count      = 2
-    vm_size         = "Standard_D2_v2"
-    os_disk_size_gb = 30
+    name                = "workstation"
+    node_count          = var.system_node_count
+    vm_size             = "Standard_DS2_v2"
+    type                = "VirtualMachineScaleSets"
+    availability_zones  = [1, 2, 3]
+    enable_auto_scaling = false
   }
 
-  service_principal {
-    client_id     = var.appId
-    client_secret = var.password
+  identity {
+    type = "SystemAssigned"
   }
 
-  role_based_access_control {
-    enabled = true
-  }
-
-  tags = {
-    environment = "Demo"
+  network_profile {
+    load_balancer_sku = "Standard"
+    network_plugin    = "kubenet" # CNI
   }
 }
