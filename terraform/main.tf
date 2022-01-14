@@ -23,7 +23,6 @@ module "AKS" {
   kubernetes_version  = var.kubernetes_version
   location            = var.location
   rgname              = var.rgname
-  resource_group_name = var.resource_group_name
   node_resource_group = var.node_resource_group
   system_node_count   = var.system_node_count
 }
