@@ -26,6 +26,6 @@ module "AKS" {
   rgname              = var.rgname
   node_resource_group = var.node_resource_group
   system_node_count   = var.system_node_count
-}
+ }
 
   
