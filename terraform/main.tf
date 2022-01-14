@@ -1,8 +1,9 @@
+# File
 terraform {
   backend "azurerm" {
-    resource_group_name  = "TerraformDemo"
-    storage_account_name = "terraformcodeops"
-    container_name       = "tfstatefile"
+    resource_group_name  = "TerraformDevOps"
+    storage_account_name = "fiservdevopssa"
+    container_name       = "tfstate"
     key                  = "dev.terraform.tfstate"
   }
 }
@@ -26,6 +27,5 @@ module "AKS" {
   node_resource_group = var.node_resource_group
   system_node_count   = var.system_node_count
 }
-
 
   
