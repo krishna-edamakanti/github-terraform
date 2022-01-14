@@ -1,7 +1,7 @@
 rgname              = "aks_rgname"
 location            = "East US"
 sname               = "devopsguru192"
-resource_group_name = "aks_terraform_rg"
+resource_group_name = "aks_rgname"
 cluster_name        = "terraform-aks"
 kubernetes_version  = "1.22.2"
 system_node_count   = 3
