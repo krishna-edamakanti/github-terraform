@@ -1,4 +1,4 @@
-rgname              = "aks_rgname"
+rgname              = "first_one"
 location            = "East US"
 sname               = "devopsguru192"
 cluster_name        = "terraform-aks"
