@@ -1,6 +1,6 @@
-rgname              = "first_one"
+rgname              = "github-action"
 location            = "East US"
-sname               = "devopsguru192"
+sname               = "devopsguru190"
 cluster_name        = "terraform-aks"
 kubernetes_version  = "1.22.2"
 system_node_count   = 3
