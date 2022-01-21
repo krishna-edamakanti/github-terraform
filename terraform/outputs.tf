@@ -3,4 +3,3 @@ output "rg_name" {
     appname = module.RG.resourcegroup_name.rg_name
   }
 }
-© 2022 GitHub, Inc.
