@@ -1,10 +1,10 @@
 # File test
 terraform {
   backend "azurerm" {
-    resource_group_name  = "TerraformDevOps"
-    storage_account_name = "fiservdevopssa"
-    container_name       = "tfstate"
-    key                  = "dev.terraform.tfstate"
+    resource_group_name  = "myrg"
+    storage_account_name = "storagdemo123"
+    container_name       = "container1"
+    key                  = "terraform.tfstate"
   }
 }
 module "RG" {
