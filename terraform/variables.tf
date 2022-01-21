@@ -32,7 +32,3 @@ variable "acr_name" {
   type        = string
   description = "ACR name in Azure"
 }
-variable "vmadmin_password" {
-  type        = string
-  description = "VM password in Azure"
-}
