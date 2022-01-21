@@ -19,6 +19,10 @@ resource "azurerm_kubernetes_cluster" "aks" {
     type = "SystemAssigned"
   }
 
+  role_based_access_control {
+    enabled = true
+  }
+
   network_profile {
     load_balancer_sku = "Standard"
     network_plugin    = "kubenet" # CNI
