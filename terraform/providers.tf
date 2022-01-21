@@ -1,5 +1,11 @@
-output "rg_name" {
-  value = {
-    appname = module.RG.resourcegroup_name.rg_name
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
   }
+}
+provider "azurerm" {
+  features {}
 }
